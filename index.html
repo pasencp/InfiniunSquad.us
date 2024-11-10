@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Oficial</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.discordapp.com/attachments/1299091768222154893/1305131913366995067/image0.gif?ex=6731ea50&is=673098d0&hm=aa0fa93fe84346cfa2519b6a835f567d3bce7bec68318fe0a258d468a1e2cd83&'); 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            padding: 12px 24px; 
+            font-size: 1.2rem;  
+            margin: 20px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 15px; 
+        }
+
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        @keyframes buttonGrowShrink {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        #toolsButton, #discordButton, #selfbotButton {
+            animation: buttonGrowShrink 1s infinite;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la página oficial de InfiniumSquad</h1>
+
+        <div class="section">
+            <h2>Tools</h2>
+            <p>En esta parte, están las tools. Para conseguir tools gratuitas, debes clicar en el botón de abajo.</p>
+            <button id="toolsButton" class="button" onclick="window.location.href='https://discord.gg/uBWn7f8xyz'">
+                Tools Here
+            </button>
+        </div>
+
+        <div class="section">
+            <h2>Discord</h2>
+            <p>Haz clic en el siguiente botón para unirte a mi servidor de Discord.</p>
+            <button id="discordButton" class="button" onclick="window.location.href='https://discord.gg/uBWn7f8xyz'">
+                Server
+            </button>
+        </div>
+
+        <div class="section">
+            <h2>Selfbot</h2>
+            <p>Esta es la parte del Selfbot. Si quieres conseguir un selfbot bueno y gratuito, haz clic en el botón de abajo.</p>
+            <button id="selfbotButton" class="button" onclick="window.location.href='https://discord.gg/uBWn7f8xyz'">
+                Selfbot
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function animateButton(id) {
+            const button = document.getElementById(id);
+            button.style.animation = 'buttonGrowShrink 1s infinite';
+        }
+
+        animateButton('toolsButton');
+        animateButton('discordButton');
+        animateButton('selfbotButton');
+    </script>
+</body>
+</html>
